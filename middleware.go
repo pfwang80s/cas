@@ -17,7 +17,8 @@ func (c *Client) Handler(h http.Handler) http.Handler {
 		setClient(r, c)
 
 		if !IsAuthenticated(r) {
-			RedirectToLogin(w, r)
+			http.Error(w, "not authenticated", http.StatusUnauthorized)
+			// RedirectToLogin(w, r)
 			return
 		}
 
