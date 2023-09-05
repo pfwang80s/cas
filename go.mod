@@ -1,4 +1,4 @@
-module github.com/pfwang80s/cas.v3
+module github.com/pfwang80s/cas
 
 go 1.12
 
